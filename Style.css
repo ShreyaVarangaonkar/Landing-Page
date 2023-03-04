@@ -1,0 +1,375 @@
+# Landing-Page
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+    max-width: 65rem;
+  }
+}
+#hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: rgb(27, 25, 25);
+  background-blend-mode: darken;
+  padding: 3.5rem;
+}
+
+#header {
+  
+  position:fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+
+  opacity: 0.95;
+
+  z-index: 1000;
+  height: auto;
+  padding: 1rem 1rem;
+}
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(240, 55, 55, 0.7);
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+}
+
+#header .logo img {
+  width: 10rem;
+}
+#header #nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero-btn-container a,
+#header #nav-bar a {
+  text-decoration: none;
+
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: color 250ms ease-in-out;
+}
+#header #nav-bar a {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  #header #nav-bar a {
+    margin-bottom: 0;
+  }
+}
+
+#header #nav-bar a:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+#header #nav-bar a:not(:last-child):hover {
+  color: #bc2526;
+}
+
+.hero-btn-container a.hero-btn,
+#header #nav-bar a.nav-btn {
+  padding: 0.75rem 1.25rem;
+  background-color: #bc2526;
+  color: white;
+  border-radius: 25px;
+  transition: all 250ms ease-in-out;
+}
+.hero-btn-container a.hero-btn:hover {
+  background-color: #d83636;
+}
+#header #nav-bar a.nav-btn:hover {
+  background-color: #d83636;
+}
+@media (min-width: 768px) {
+  #header .container {
+    flex-direction: row;
+  }
+  #header .container #nav-bar {
+    justify-content: flex-end;
+  }
+  #header #nav-bar a {
+    padding: 0;
+  }
+  #header #nav-bar a:not(:last-child) {
+    margin-right: 2.25rem;
+  }
+  #header .container .logo {
+    margin-bottom: 0;
+  }
+}
+
+.hero-container {
+  color: white;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  margin-bottom: 2rem;
+}
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.hero-content h1 span {
+  color: #d83636;
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    align-items: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content h1 {
+    font-size: 4.75rem;
+  }
+}
+#destination {
+  padding: 3.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 550px) {
+  .destination-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+#destination h2,
+#blog h2,
+#contact h2 {
+  font-size: 2.25rem;
+  text-align: center;
+  color: #303370;
+  margin-bottom: 3.5rem;
+}
+
+.destination-card {
+  width: 85%;
+
+  overflow: hidden;
+
+  margin: 0 auto;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-bottom: 2rem;
+  transition: all 250ms ease-in-out;
+}
+.destination-card:hover {
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 550px) {
+  .destination-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .destination-card {
+    width: 30%;
+  }
+}
+
+.destination-card img {
+  width: 100%;
+
+  overflow: hidden;
+
+  transition: all 400ms ease-in-out;
+}
+.destination-card img:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  margin-top: -8px;
+  z-index: 100;
+  overflow: hidden;
+
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1.5rem 1.5rem;
+  color: white;
+}
+.card-content,
+.card-content .destination-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.destination-title h4 {
+  font-weight: 400;
+  margin-left: 0.75rem;
+  font-size: 1.25rem;
+}
+.destination-title i {
+  color: #d2d2d2;
+}
+
+#blog .container {
+  padding: 0 1rem 3.5rem;
+}
+.blog-card-container {
+  margin-bottom: 3rem;
+}
+.blog-card-container h3 {
+  font-size: 1.75rem;
+  color: #161616;
+}
+
+@media (min-width: 550px) {
+  .recent-blog-container .blog-card {
+    width: 48%;
+  }
+}
+
+#contact {
+  padding: 3rem 0;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(250, 246, 246);
+  background-blend-mode: darken;
+}
+#contact h2 {
+  color: rgb(0, 0, 0);
+  padding-top: 2rem;
+  margin-bottom: 0;
+}
+@media (min-width: 48.75rem) {
+  #contact h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+#contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  z-index: 100;
+}
+.contact-form {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem 2rem;
+  border-radius: 5px;
+}
+@media (min-width: 48.75rem) {
+  .contact-form {
+    width: 75%;
+    padding: 3rem 2.75rem;
+  }
+}
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+.contact-form textarea {
+  font-size: 1.15rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form .form-btn {
+  padding: 1.15em 1em;
+
+  background-color: #bc2526;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  width: 50%;
+}
+
+.contact-form .form-btn:hover {
+  background-color: #d83636;
+}
+.footer {
+  padding: 2.25rem 0;
+}
+.footer .container {
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #0d0d0d;
+  opacity: 0.95;
+
+  z-index: 1000;
+  height: auto;
+  padding: 1rem 1rem;
+}
